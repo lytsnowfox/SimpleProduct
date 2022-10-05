@@ -21,6 +21,7 @@ public class ProxyServiceImpl implements ProxyService {
 
     @Override
     public int asyncProcess(Param param) {
+        //new Thread(()-> simpleService.process(param)).start();
         simpleService.asyncProcess(param);
         return 1;
     }
